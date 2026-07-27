@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="__om-first-paint">html { background: #0e1116; } :root { color-scheme: dark; }</style>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Saad Khairullah · Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<script src="./fx.js"></script>
+<link rel="prefetch" href="./Project-Blockheads.dc.html">
+<link rel="prefetch" href="./Project-VoiceAI.dc.html">
+<link rel="prefetch" href="./Project-AI-Interviewer.dc.html">
+<link rel="prefetch" href="./Project-CoalMineLocator.dc.html">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-snap-type: y mandatory; scroll-behavior: smooth; }
+  body { margin: 0; background: oklch(0.14 0.006 265); color: oklch(0.96 0.004 265); font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent, #aef23a); }
+  ::selection { background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: oklch(0.14 0.006 265); }
+  ::-webkit-scrollbar-thumb { background: oklch(0.32 0.01 265); border-radius: 5px; }
+  @keyframes blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+  @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.14); } }
+  @keyframes floaty { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, -40px); } }
+  @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes secIn { from { opacity: 0; transform: translateY(90px) scale(0.95); } to { opacity: 1; transform: none; } }
+  @keyframes secLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: none; } }
+  @keyframes secRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: none; } }
+  @keyframes ghostIn { from { opacity: 0; transform: translateY(60px) scale(1.3); } to { opacity: 0.9; transform: none; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes glitch { 0%, 100% { text-shadow: none; } 20% { text-shadow: 4px 0 oklch(0.7 0.19 350 / 0.7), -4px 0 oklch(0.8 0.15 230 / 0.7); } 60% { text-shadow: -4px 0 oklch(0.7 0.19 350 / 0.7), 4px 0 oklch(0.8 0.15 230 / 0.7); } }
+  @keyframes gridPan { from { background-position: 0 0; } to { background-position: 60px 60px; } }
+  @keyframes wipeOut { from { transform: translateY(0); } to { transform: translateY(-101%); } }
+  @keyframes textCycle { 0% { opacity: 0; } 18% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+</style>
+</helmet>
+<div style="--accent: {{ accent }};">
+
+  <!-- scroll progress -->
+  <div style="position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 90; background: var(--accent, #aef23a); transform-origin: left; animation: growX linear both; animation-timeline: scroll();"></div>
+
+  <!-- cursor glow + scanlines -->
+  <div id="cursor-glow" style="position: fixed; left: 50%; top: 40%; width: 640px; height: 640px; margin: -320px 0 0 -320px; border-radius: 50%; background: radial-gradient(circle, oklch(0.75 0.19 128 / 0.08), transparent 62%); pointer-events: none; z-index: 65; mix-blend-mode: screen;"></div>
+  <div style="position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: {{ scanlineOpacity }}; background: repeating-linear-gradient(0deg, transparent 0 2px, oklch(0 0 0 / 0.05) 2px 3px);"></div>
+
+  <!-- page transition -->
+  <div style="position: fixed; inset: 0; z-index: 120; background: oklch(0.13 0.006 265); pointer-events: none; animation: wipeOut 0.5s cubic-bezier(0.65, 0, 0.35, 1) 0.62s both; display: grid; place-items: center;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent, #aef23a); font-weight: 700; animation: textCycle 0.58s ease 0.04s both;">&gt; cat ~/saad_</span></div>
+  <div id="page-wipe" style="position: fixed; inset: 0; z-index: 120; background: oklch(0.13 0.006 265); pointer-events: none; transform: translateY(101%); transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); display: grid; place-items: center;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent, #aef23a); font-weight: 700; opacity: 0;">&gt; open ./project_</span></div>
+
+  <!-- fixed nav -->
+  <header style="position: fixed; top: 3px; left: 0; right: 0; z-index: 80;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 36px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="#s0" style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; backdrop-filter: blur(10px); background: oklch(0.14 0.006 265 / 0.5); padding: 8px 14px; border-radius: 30px; border: 1px solid oklch(0.32 0.01 265 / 0.5);">
+        <span style="display: inline-grid; place-items: center; width: 24px; height: 24px; border: 1.5px solid var(--accent, #aef23a); color: var(--accent, #aef23a); border-radius: 6px; font-size: 11px;">SK</span>
+        saad_khairullah
+      </a>
+      <nav style="display: flex; align-items: center; gap: 4px; font-family: 'JetBrains Mono', monospace; font-size: 13px; backdrop-filter: blur(10px); background: oklch(0.14 0.006 265 / 0.5); padding: 6px; border-radius: 30px; border: 1px solid oklch(0.32 0.01 265 / 0.5);">
+        <a href="#s2" style="padding: 7px 14px; border-radius: 20px;" style-hover="background: oklch(0.26 0.01 265);">work</a>
+        <a href="#s6" style="padding: 7px 14px; border-radius: 20px;" style-hover="background: oklch(0.26 0.01 265);">toolbox</a>
+        <a href="mailto:Skhairullah10@hotmail.com" style="padding: 7px 16px; border-radius: 20px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700;" style-hover="filter: brightness(1.15); color: oklch(0.14 0.006 265);">contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- dot nav -->
+  <nav style="position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 80; display: flex; flex-direction: column; gap: 14px;">
+    <sc-for list="{{ dots }}" as="d" hint-placeholder-count="8">
+      <a href="{{ d.href }}" title="{{ d.label }}" style="{{ d.style }}"></a>
+    </sc-for>
+  </nav>
+
+  <!-- S0 · HERO -->
+  <section id="s0" data-screen-label="Hero" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="position: absolute; inset: 0; background: url('./assets/plexus-bg.jpg') center / cover no-repeat; animation: kenburns 22s ease-in-out infinite alternate;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, oklch(0.14 0.006 265 / 0.82), oklch(0.14 0.006 265 / 0.55) 45%, oklch(0.14 0.006 265) 96%);"></div>
+    <canvas data-rain="" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+    <div style="position: absolute; width: 480px; height: 480px; border-radius: 50%; left: 58%; top: 8%; background: radial-gradient(circle, oklch(0.6 0.16 128 / 0.16), transparent 65%); animation: floaty 11s ease-in-out infinite; pointer-events: none;"></div>
+    <div style="position: relative; flex: 1; display: grid; align-content: center; max-width: 1240px; width: 100%; margin: 0 auto; padding: 90px 36px 0;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 24px; animation: rise 0.7s ease both;">Software engineer · Dallas, TX · U.S. Citizen</div>
+      <h1 style="font-size: clamp(56px, 9.5vw, 132px); line-height: 0.92; letter-spacing: -0.04em; font-weight: 700; margin: 0 0 28px; animation: rise 0.7s ease 0.08s both;">Saad<br>Khairullah</h1>
+      <p style="font-size: clamp(17px, 2vw, 22px); line-height: 1.55; color: oklch(0.8 0.008 265); max-width: 52ch; margin: 0 0 36px; text-wrap: pretty; animation: rise 0.7s ease 0.16s both;">Backend / Full Stack Developer &nbsp;·&nbsp; AI / ML Engineer &nbsp;·&nbsp; Systems &amp; Security Engineer</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; animation: rise 0.7s ease 0.24s both;">
+        <a href="./assets/Saad_Khairullah_Resume.pdf" download="" style="padding: 15px 26px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); color: oklch(0.9 0.006 265); font-weight: 700; font-size: 16px; font-family: 'JetBrains Mono', monospace; display: inline-flex; align-items: center; gap: 8px;" style-hover="border-color: var(--accent, #aef23a); color: var(--accent, #aef23a);">↓ Download resume</a>
+        <a href="#s2" style="padding: 15px 26px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">View selected work</a>
+        <a href="https://github.com/saadkhairullah" target="_blank" rel="noopener" style="padding: 15px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px); transition: transform 0.2s, border-color 0.2s;" style-hover="transform: translateY(-3px); border-color: var(--accent, #aef23a);">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/saad-khairullah-bbba4718b/" target="_blank" rel="noopener" style="padding: 15px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px); transition: transform 0.2s, border-color 0.2s;" style-hover="transform: translateY(-3px); border-color: var(--accent, #aef23a);">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div style="position: relative; border-top: 1px solid oklch(0.3 0.01 265 / 0.5); padding: 16px 0; overflow: hidden; white-space: nowrap; -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);">
+      <div style="display: inline-flex; gap: 44px; animation: marquee 34s linear infinite; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.58 0.01 265); text-transform: uppercase; letter-spacing: 0.1em;">
+        <span>Agentic AI</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/pytorch/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">PyTorch</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/fastapi/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">FastAPI</span><span style="color: oklch(0.4 0.01 265);">/</span><span>Reverse engineering</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;">Ghidra</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/wireshark/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Wireshark</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/react/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">React</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/nextdotjs/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Next.js</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/python/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Python</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/typescript/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">TypeScript</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/docker/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Docker</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/linux/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Linux</span><span style="color: oklch(0.4 0.01 265);">/</span>
+        <span>Agentic AI</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/pytorch/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">PyTorch</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/fastapi/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">FastAPI</span><span style="color: oklch(0.4 0.01 265);">/</span><span>Reverse engineering</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;">Ghidra</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/wireshark/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Wireshark</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/react/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">React</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/nextdotjs/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Next.js</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/python/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Python</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/typescript/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">TypeScript</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/docker/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Docker</span><span style="color: oklch(0.4 0.01 265);">/</span><span style="display: inline-flex; align-items: center; gap: 9px;"><img src="https://cdn.simpleicons.org/linux/8a94a3" style="width: 16px; height: 16px;" alt="" loading="lazy" decoding="async">Linux</span><span style="color: oklch(0.4 0.01 265);">/</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2 · P1 -->
+  <section id="s2" data-screen-label="Project 01 Blockheads" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: grid; align-content: center;">
+    <div style="position: absolute; inset: 0; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M10 10h40v40h-30M70 30h40M90 30v60h-30M30 90h60M50 50v30' fill='none' stroke='%23323a48' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='110' cy='30' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='30' cy='90' r='2.5' fill='%23323a48'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; opacity: 0.5; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, black, transparent); pointer-events: none;"></div>
+    <div style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); font-size: clamp(220px, 34vw, 480px); font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px oklch(0.28 0.01 265); pointer-events: none; animation: ghostIn linear both; animation-timeline: view(); animation-range: entry 5% entry 60%;">01</div>
+    <div style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 90px 36px 40px; position: relative; animation: secIn linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <span style="color: oklch(0.5 0.01 265);">project 01 / 04</span>
+        <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 4px 12px; border-radius: 20px; white-space: nowrap;">Systems · Security</span>
+      </div>
+      <h2 data-scramble="" style="font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.03em; line-height: 1; margin: 0 0 22px; font-weight: 700; max-width: 14ch;">Blockheads Server</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: oklch(0.76 0.01 265); max-width: 56ch; margin: 0 0 32px; text-wrap: pretty;">A complex multi-service system built from the ground up to extend a closed-source game server: protocol-level tooling, performance work, and a lasting contribution to the reverse-engineering community.</p>
+      <div style="display: flex; gap: 48px; margin-bottom: 38px; flex-wrap: wrap; animation: secIn linear both; animation-timeline: view(); animation-range: entry 22% entry 70%;">
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">300+</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">registered players</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">20s → &lt;5ms</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">query latency</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">20+</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">real attacks blocked</div></div>
+      </div>
+      <a href="Project-Blockheads.dc.html" data-magnet="" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">Open project →</a>
+    </div>
+  </section>
+
+  <!-- S3 · P2 -->
+  <section id="s3" data-screen-label="Project 02 AI Interviewer" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: grid; align-content: center; background: oklch(0.165 0.008 200 / 0.35);">
+    <div style="position: absolute; inset: 0; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M10 10h40v40h-30M70 30h40M90 30v60h-30M30 90h60M50 50v30' fill='none' stroke='%23323a48' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='110' cy='30' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='30' cy='90' r='2.5' fill='%23323a48'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; opacity: 0.5; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, black, transparent); pointer-events: none;"></div>
+    <div style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); font-size: clamp(220px, 34vw, 480px); font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px oklch(0.28 0.01 265); pointer-events: none; animation: ghostIn linear both; animation-timeline: view(); animation-range: entry 5% entry 60%;">02</div>
+    <div style="position: absolute; left: 4%; bottom: 3%; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 2.1; color: oklch(0.6 0.06 128 / 0.4); pointer-events: none; user-select: none; animation: floaty 14s ease-in-out infinite;">epoch 3/4 · loss 0.412 · lr 2e-4<br>lora_r=16 · alpha=32 · dropout=0.05<br>[llama.cpp] 512 tok · local<br>gradient checkpointing + liger kernels</div>
+    <div style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 90px 36px 40px; position: relative; display: grid; justify-items: end; text-align: right; animation: secRight linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 4px 12px; border-radius: 20px; white-space: nowrap;">AI Infra · LLM</span>
+        <span style="color: oklch(0.5 0.01 265);">project 02 / 04</span>
+      </div>
+      <h2 data-scramble="" style="font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.03em; line-height: 1; margin: 0 0 22px; font-weight: 700; max-width: 14ch;">AI Interviewer</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: oklch(0.76 0.01 265); max-width: 56ch; margin: 0 0 32px; text-wrap: pretty;">A free, fully local AI interviewer: a Q4 quantized 7B Qwen model trained on 60+ real interviews, bundled into a downloadable Tauri app. Speech to speech, a real LeetCode round, and your interview data never leaves your machine.</p>
+      <div style="display: flex; gap: 48px; margin-bottom: 38px; flex-wrap: wrap; animation: secIn linear both; animation-timeline: view(); animation-range: entry 22% entry 70%;">
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">60+</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">real interviews trained on</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">7B</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">Qwen, Q4 quantized</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">100%</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">local inference</div></div>
+      </div>
+      <a href="Project-AI-Interviewer.dc.html" data-magnet="" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">Open project →</a>
+    </div>
+  </section>
+
+  <!-- S4 · P3 -->
+  <section id="s4" data-screen-label="Project 03 Coal Mine Locator" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: grid; align-content: center;">
+    <div style="position: absolute; inset: 0; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M10 10h40v40h-30M70 30h40M90 30v60h-30M30 90h60M50 50v30' fill='none' stroke='%23323a48' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='110' cy='30' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='30' cy='90' r='2.5' fill='%23323a48'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; opacity: 0.5; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, black, transparent); pointer-events: none;"></div>
+    <div style="position: absolute; right: -60px; top: 50%; transform: translateY(-50%); font-size: clamp(220px, 34vw, 480px); font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px oklch(0.28 0.01 265); pointer-events: none; animation: ghostIn linear both; animation-timeline: view(); animation-range: entry 5% entry 60%;">03</div>
+    <div style="position: absolute; right: 4%; text-align: right; bottom: 3%; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 2.1; color: oklch(0.6 0.06 128 / 0.4); pointer-events: none; user-select: none; animation: floaty 16s ease-in-out infinite;">{"type":"Feature","geometry":{"type":"Polygon"…<br>[32.7357, -97.1467] · shaft_depth: 40 ft<br>db.mines.countDocuments() → 351<br>▲ vercel production · deployed in 12 s</div>
+    <div style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 90px 36px 40px; position: relative; animation: secLeft linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <span style="color: oklch(0.5 0.01 265);">project 03 / 04</span>
+        <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 4px 12px; border-radius: 20px; white-space: nowrap;">Full-stack · Product</span>
+      </div>
+      <h2 data-scramble="" style="font-size: clamp(38px, 5.4vw, 68px); letter-spacing: -0.03em; line-height: 1; margin: 0 0 22px; font-weight: 700; max-width: 16ch;">Texas Underground Coal Mine Locator</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: oklch(0.76 0.01 265); max-width: 56ch; margin: 0 0 32px; text-wrap: pretty;">A live map of 350+ abandoned underground coal mines in Texas and the boundaries they mined inside, so home builders and business owners can avoid putting foundations over ground that is already sinking. Led a team of 5 and shipped it.</p>
+      <div style="display: flex; gap: 48px; margin-bottom: 38px; flex-wrap: wrap; animation: secIn linear both; animation-timeline: view(); animation-range: entry 22% entry 70%;">
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">350+</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">mines mapped, live</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">5</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">engineers led</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">Live</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">txuml.vercel.app</div></div>
+      </div>
+      <a href="Project-CoalMineLocator.dc.html" data-magnet="" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">Open project →</a>
+    </div>
+  </section>
+
+  <!-- S5 · P4 -->
+  <section id="s5" data-screen-label="Project 04 Voice AI" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: grid; align-content: center; background: oklch(0.165 0.008 140 / 0.3);">
+    <div style="position: absolute; inset: 0; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M10 10h40v40h-30M70 30h40M90 30v60h-30M30 90h60M50 50v30' fill='none' stroke='%23323a48' stroke-width='1'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='110' cy='30' r='2.5' fill='%23323a48'/%3E%3Ccircle cx='30' cy='90' r='2.5' fill='%23323a48'/%3E%3C/svg%3E&quot;); background-size: 120px 120px; opacity: 0.5; -webkit-mask-image: radial-gradient(70% 70% at 50% 50%, black, transparent); pointer-events: none;"></div>
+    <div style="position: absolute; left: -60px; top: 50%; transform: translateY(-50%); font-size: clamp(220px, 34vw, 480px); font-weight: 700; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px oklch(0.28 0.01 265); pointer-events: none; animation: ghostIn linear both; animation-timeline: view(); animation-range: entry 5% entry 60%;">04</div>
+    <div style="position: absolute; left: 4%; bottom: 3%; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 2.1; color: oklch(0.6 0.06 128 / 0.4); pointer-events: none; user-select: none; animation: floaty 15s ease-in-out infinite;">SIP/2.0 200 OK · RTP seq=4821 jitter=3ms<br>[vad] speech_start @ 00:12.4<br>[llm] llama-3.3-70b · 41 tok/s<br>[call 047] "…can I book for Tuesday?"</div>
+    <div style="max-width: 1240px; width: 100%; margin: 0 auto; padding: 90px 36px 40px; position: relative; display: grid; justify-items: end; text-align: right; animation: secRight linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+        <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 4px 12px; border-radius: 20px; white-space: nowrap;">Agentic AI</span>
+        <span style="color: oklch(0.5 0.01 265);">project 04 / 04</span>
+      </div>
+      <h2 data-scramble="" style="font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.03em; line-height: 1; margin: 0 0 22px; font-weight: 700; max-width: 14ch;">Healthcare Voice AI Agent</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: oklch(0.76 0.01 265); max-width: 56ch; margin: 0 0 32px; text-wrap: pretty;">A voice agent that behaves like a real healthcare patient, autonomously calling clinics and holding a full conversation to probe service quality. Pick one of 17 scenarios and it handles the call on its own. Built in 31 hours.</p>
+      <div style="display: flex; gap: 48px; margin-bottom: 38px; flex-wrap: wrap; animation: secIn linear both; animation-timeline: view(); animation-range: entry 22% entry 70%;">
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">60+</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">production calls</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">&lt;$2</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">total cost</div></div>
+        <div><div style="font-size: 40px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">31 hrs</div><div style="font-size: 14px; color: oklch(0.62 0.01 265);">solo build</div></div>
+      </div>
+      <a href="Project-VoiceAI.dc.html" data-magnet="" style="display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">Open project →</a>
+    </div>
+  </section>
+
+  <!-- S6 · TOOLBOX + BACKGROUND -->
+  <section id="s6" data-screen-label="Toolbox" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; display: grid; align-content: center;">
+    <div style="position: absolute; inset: 0; background: url('./assets/plexus-bg.jpg') center / cover no-repeat; opacity: 0.09; pointer-events: none;"></div>
+    <div style="position: absolute; inset: 0; background-image: linear-gradient(oklch(0.34 0.01 265 / 0.22) 1px, transparent 1px), linear-gradient(90deg, oklch(0.34 0.01 265 / 0.22) 1px, transparent 1px); background-size: 60px 60px; animation: gridPan 16s linear infinite; -webkit-mask-image: radial-gradient(75% 75% at 50% 50%, black, transparent); pointer-events: none;"></div>
+    <div style="max-width: 1240px; width: 100%; max-height: 100vh; overflow-y: auto; margin: 0 auto; padding: 84px 36px 30px; animation: secIn linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <h2 data-scramble="" style="font-size: clamp(24px, 3vw, 44px); letter-spacing: -0.025em; margin: 0 0 clamp(14px, 2.4vh, 30px); font-weight: 700;">Toolbox</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(10px, 1.6vh, 14px); margin-bottom: clamp(10px, 1.8vh, 26px);">
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">Languages</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">Python · TypeScript · JavaScript (ES6+) · Java · C</div>
+        </div>
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">Backend / APIs</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">FastAPI · Node.js · Express · Flask · Spring Boot · REST · WebSocket · async I/O · JWT · IPC</div>
+        </div>
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">AI / LLM</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">Agentic systems · fine-tuning · LoRA / PEFT / QLoRA · PyTorch · HuggingFace · vLLM · Pipecat</div>
+        </div>
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">Frontend</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">React · Next.js · React Context · MapboxGL · HTML / CSS</div>
+        </div>
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">Databases</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">MySQL · MongoDB · LMDB · SQL · relational schema design</div>
+        </div>
+        <div data-tilt="" style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: clamp(12px, 2.2vh, 22px) 22px; transition: transform 0.25s, border-color 0.25s;" style-hover="border-color: oklch(0.45 0.08 128);">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 10px;">Systems / Tools</div>
+          <div style="font-size: clamp(12.5px, 1.9vh, 14.5px); line-height: 1.6; color: oklch(0.82 0.008 265);">Linux · Docker · Git · GitHub Actions · Ghidra · Wireshark · iptables · UDS · Bash</div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div style="background: oklch(0.28 0.01 265 / 0.25); backdrop-filter: blur(12px); border: 1px solid oklch(1 0 0 / 0.1); border-radius: 14px; padding: clamp(12px, 2vh, 20px) 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 6px;">Education</div>
+            <div style="font-size: 16px; font-weight: 700;">University of Texas at Arlington</div>
+            <div style="font-size: 13.5px; color: oklch(0.66 0.01 265);">B.S. Software Engineering</div>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.6 0.01 265); text-align: right;">Aug 2026</div>
+        </div>
+        <div style="background: oklch(0.28 0.01 265 / 0.25); backdrop-filter: blur(12px); border: 1px solid oklch(1 0 0 / 0.1); border-radius: 14px; padding: clamp(12px, 2vh, 20px) 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px;">
+          <div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 6px;">Experience</div>
+            <div style="font-size: 16px; font-weight: 700;">AI Data Annotator · Outlier.ai</div>
+            <div style="font-size: 13.5px; color: oklch(0.66 0.01 265);">Ranked AI-generated code for LLM RL pipelines</div>
+          </div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: oklch(0.6 0.01 265); text-align: right;">Apr–Jul 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 · CONTACT -->
+  <section id="s7" data-screen-label="Contact" style="position: relative; height: 100vh; scroll-snap-align: start; scroll-snap-stop: always; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="position: absolute; inset: 0; background: url('./assets/plexus-bg.jpg') center / cover no-repeat;"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(0deg, oklch(0.14 0.006 265 / 0.86), oklch(0.14 0.006 265 / 0.6) 50%, oklch(0.14 0.006 265) 98%);"></div>
+    <canvas data-rain="" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+    <div style="position: relative; flex: 1; display: grid; align-content: center; justify-items: center; text-align: center; padding: 84px 36px 0; max-height: 100vh; overflow-y: auto; animation: secIn linear both; animation-timeline: view(); animation-range: entry 5% entry 55%;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: clamp(10px, 2.2vh, 22px);">Contact</div>
+      <h2 style="font-size: min(clamp(36px, 6vw, 76px), 8.5vh); letter-spacing: -0.03em; margin: 0 0 clamp(14px, 3vh, 32px); font-weight: 700; line-height: 1.04;">Open to new grad roles,<br>starting Aug 2026.</h2>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: oklch(0.68 0.01 265); margin: 0 0 clamp(16px, 3vh, 30px);">U.S. Citizen · no sponsorship required</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+        <a href="mailto:Skhairullah10@hotmail.com" style="padding: 16px 28px; border-radius: 12px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 16px; transition: transform 0.2s, box-shadow 0.2s;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px -10px oklch(0.75 0.19 128 / 0.55); color: oklch(0.14 0.006 265);">Skhairullah10@hotmail.com</a>
+        <a href="./assets/Saad_Khairullah_Resume.pdf" download="" style="padding: 16px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px);" style-hover="border-color: var(--accent, #aef23a);">↓ Download resume</a>
+        <a href="tel:6825837072" style="padding: 16px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px);" style-hover="border-color: var(--accent, #aef23a);">682·583·7072</a>
+        <a href="https://www.linkedin.com/in/saad-khairullah-bbba4718b/" target="_blank" rel="noopener" style="padding: 16px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px);" style-hover="border-color: var(--accent, #aef23a);">LinkedIn ↗</a>
+        <a href="https://github.com/saadkhairullah" target="_blank" rel="noopener" style="padding: 16px 24px; border-radius: 12px; border: 1px solid oklch(0.38 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px; backdrop-filter: blur(6px);" style-hover="border-color: var(--accent, #aef23a);">GitHub ↗</a>
+      </div>
+    </div>
+    <footer style="position: relative; border-top: 1px solid oklch(0.28 0.01 265 / 0.6); padding: 22px 36px 26px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; max-width: 1240px; width: 100%; margin: 0 auto;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.01 265); line-height: 1.6;">© 2026 Saad Khairullah · Dallas, TX</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.52 0.01 265);">U.S. Citizen · available Aug 2026 · open to relocation</div>
+  </footer></section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#aef23a&quot;, &quot;options&quot;: [&quot;#aef23a&quot;, &quot;#3ad0f0&quot;, &quot;#ffb03a&quot;, &quot;#d9a6ff&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; },
+  &quot;showScanlines&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Theme&quot; }
+}">
+class Component extends DCLogic {
+  state = { activeId: 's0' };
+  componentDidMount() {
+    this._onScroll = () => {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = null;
+        const secs = document.querySelectorAll('section[id]');
+        let best = null, bestDist = Infinity;
+        secs.forEach(s => {
+          const d = Math.abs(s.getBoundingClientRect().top);
+          if (d < bestDist) { bestDist = d; best = s.id; }
+        });
+        if (best && best !== this.state.activeId) this.setState({ activeId: best });
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+  renderVals() {
+    const list = [
+      ['s0', 'intro'], ['s2', 'blockheads server'], ['s3', 'ai interviewer'],
+      ['s4', 'coal mine locator'], ['s5', 'voice ai agent'], ['s6', 'toolbox'], ['s7', 'contact'],
+    ];
+    const dots = list.map(([id, label]) => {
+      const active = this.state.activeId === id;
+      return {
+        href: '#' + id, label,
+        style: {
+          width: '10px', height: active ? '26px' : '10px', borderRadius: '10px',
+          background: active ? 'var(--accent, #aef23a)' : 'oklch(0.38 0.01 265)',
+          transition: 'height 0.25s, background 0.25s', display: 'block',
+        },
+      };
+    });
+    const sl = this.props.showScanlines ?? true;
+    return { accent: this.props.accent ?? null, dots, scanlineOpacity: sl ? 1 : 0 };
+  }
+}
+</script>
+</body>
+</html>

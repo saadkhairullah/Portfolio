@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: oklch(0.165 0.006 265); color: oklch(0.96 0.004 265); font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent, #aef23a); }
+  ::selection { background: var(--accent, #aef23a); color: oklch(0.165 0.006 265); }
+  @keyframes blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+</style>
+</helmet>
+<div style="--accent: {{ accent }}; min-height: 100vh; background:
+  radial-gradient(120% 80% at 85% -10%, oklch(0.22 0.02 128 / 0.35), transparent 60%),
+  radial-gradient(90% 60% at -10% 10%, oklch(0.2 0.01 265 / 0.6), transparent 55%);
+  overflow-x: clip;">
+
+  <header style="position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: oklch(0.165 0.006 265 / 0.72); border-bottom: 1px solid oklch(0.3 0.01 265 / 0.6);">
+    <div style="max-width: 1120px; margin: 0 auto; padding: 16px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <a href="#top" style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 0.02em;">
+        <span style="display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1.5px solid var(--accent, #aef23a); color: var(--accent, #aef23a); border-radius: 7px; font-size: 13px;">SK</span>
+        <span style="font-size: 14px;">saad_khairullah</span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.7 0.01 265);">
+        <a href="#work">work</a>
+        <a href="#skills">skills</a>
+        <a href="#background">background</a>
+        <a href="mailto:Skhairullah10@hotmail.com" style="color: oklch(0.165 0.006 265); background: var(--accent, #aef23a); padding: 8px 14px; border-radius: 8px; font-weight: 700;">get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" style="max-width: 1120px; margin: 0 auto; padding: 0 32px;">
+
+    <!-- HERO -->
+    <section style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; padding: 92px 0 72px; background: url(&quot;./81b4dbec-5127-4118-b503-8abc3d3ba00a-mrz5nvg8-2tc3.jpg&quot;) center / cover no-repeat">
+      <div style="animation: rise 0.6s ease both;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 22px;">// software engineer · new grad '26</div>
+        <h1 style="font-size: clamp(44px, 6.6vw, 82px); line-height: 0.98; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 24px;">Saad<br>Khairullah</h1>
+        <p style="font-size: clamp(18px, 2.3vw, 23px); line-height: 1.5; color: oklch(0.82 0.008 265); max-width: 34ch; margin: 0 0 14px; text-wrap: pretty;">I build <span style="color: var(--accent, #aef23a);">production AI &amp; systems</span> — agentic voice pipelines, fine-tuned LLMs, reverse-engineered protocols — and ship them to real users.</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 13.5px; line-height: 1.7; color: oklch(0.66 0.01 265); margin: 0 0 34px;">Dallas, TX · open to relocation<br>B.S. Software Engineering, UT Arlington · Aug 2026</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+          <a href="#work" style="padding: 13px 22px; border-radius: 10px; background: var(--accent, #aef23a); color: oklch(0.165 0.006 265); font-weight: 700; font-size: 15px;">See what I've shipped ↓</a>
+          <a href="https://github.com/saadkhairullah" target="_blank" rel="noopener" style="padding: 13px 20px; border-radius: 10px; border: 1px solid oklch(0.32 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px;">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/saad-khairullah-bbba4718b/" target="_blank" rel="noopener" style="padding: 13px 20px; border-radius: 10px; border: 1px solid oklch(0.32 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px;">LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div style="animation: rise 0.6s ease 0.12s both; background: oklch(0.135 0.006 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px -30px oklch(0 0 0 / 0.8);">
+        <div style="display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid oklch(0.26 0.01 265); background: oklch(0.185 0.007 265);">
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: oklch(0.65 0.16 25);"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: oklch(0.82 0.15 85);"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: oklch(0.8 0.16 145);"></span>
+          <span style="margin-left: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.55 0.01 265);">~ / saad — zsh</span>
+        </div>
+        <div style="padding: 20px 20px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.85; color: oklch(0.8 0.008 265);">
+          <div><span style="color: var(--accent, #aef23a);">$</span> whoami</div>
+          <div style="color: oklch(0.62 0.01 265);">software engineer — I ship, then iterate</div>
+          <div style="height: 12px;"></div>
+          <div><span style="color: var(--accent, #aef23a);">$</span> cat focus.txt</div>
+          <div style="color: oklch(0.62 0.01 265);">&gt; agentic AI · LLM fine-tuning<br>&gt; backend / APIs · systems &amp; security</div>
+          <div style="height: 12px;"></div>
+          <div><span style="color: var(--accent, #aef23a);">$</span> ls ships/</div>
+          <div style="color: oklch(0.62 0.01 265);">blockheads-server&nbsp;&nbsp;voice-ai-agent<br>ai-interviewer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coal-mine-locator</div>
+          <div style="height: 12px;"></div>
+          <div><span style="color: var(--accent, #aef23a);">$</span> uptime<span style="display: inline-block; width: 9px; height: 16px; margin-left: 4px; background: var(--accent, #aef23a); vertical-align: -2px; animation: blink 1.1s step-end infinite;"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET -->
+    <sc-if value="{{ showMarket }}" hint-placeholder-val="{{ true }}">
+    <section id="market" style="padding: 30px 0 20px; border-top: 1px solid oklch(0.26 0.01 265); border-bottom: 1px solid oklch(0.26 0.01 265);">
+      <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start;">
+        <div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 16px;">// why this résumé, right now</div>
+          <h2 style="font-size: clamp(26px, 3.4vw, 38px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 16px; font-weight: 700;">The market is hiring for exactly what I build.</h2>
+          <p style="font-size: 16px; line-height: 1.6; color: oklch(0.72 0.01 265); margin: 0; text-wrap: pretty;">In 2026 the entry-level squeeze is real — new grads are only ~7% of Big&nbsp;Tech hires. The teams still hiring juniors want people who <em style="color: oklch(0.92 0.004 265); font-style: normal;">already ship a specialization</em>. My four projects sit squarely on the tracks with the strongest tailwinds.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: oklch(0.26 0.01 265); border: 1px solid oklch(0.26 0.01 265); border-radius: 12px; overflow: hidden;">
+          <div style="background: oklch(0.165 0.006 265); padding: 20px 22px;">
+            <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">#1</div>
+            <div style="font-size: 13px; color: oklch(0.68 0.01 265); line-height: 1.4; margin-top: 4px;">AI Engineer — fastest-growing US job title <a href="#src-1" style="color: oklch(0.5 0.01 265);">[1]</a></div>
+          </div>
+          <div style="background: oklch(0.165 0.006 265); padding: 20px 22px;">
+            <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">+280%</div>
+            <div style="font-size: 13px; color: oklch(0.68 0.01 265); line-height: 1.4; margin-top: 4px;">agentic-AI job postings, YoY <a href="#src-1" style="color: oklch(0.5 0.01 265);">[1]</a></div>
+          </div>
+          <div style="background: oklch(0.165 0.006 265); padding: 20px 22px;">
+            <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">+124%</div>
+            <div style="font-size: 13px; color: oklch(0.68 0.01 265); line-height: 1.4; margin-top: 4px;">security-engineering listings, YoY <a href="#src-1" style="color: oklch(0.5 0.01 265);">[1]</a></div>
+          </div>
+          <div style="background: oklch(0.165 0.006 265); padding: 20px 22px;">
+            <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">3.4:1</div>
+            <div style="font-size: 13px; color: oklch(0.68 0.01 265); line-height: 1.4; margin-top: 4px;">open AI roles per qualified candidate <a href="#src-1" style="color: oklch(0.5 0.01 265);">[1]</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- WORK -->
+    <section id="work" style="padding: 76px 0 40px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 36px; flex-wrap: wrap;">
+        <h2 style="font-size: clamp(28px, 4vw, 46px); letter-spacing: -0.02em; margin: 0; font-weight: 700;">Selected work</h2>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.6 0.01 265);">04 projects · all live or open-source</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;">
+
+        <!-- P1 -->
+        <article style="grid-column: span 2; display: grid; grid-template-columns: 1.35fr 1fr; gap: 34px; background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+              <span style="color: oklch(0.5 0.01 265);">01</span>
+              <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 3px 9px; border-radius: 20px;">Systems · Security</span>
+            </div>
+            <h3 style="font-size: 25px; letter-spacing: -0.015em; margin: 0 0 10px; font-weight: 700;">Blockheads Game Server</h3>
+            <p style="font-size: 15.5px; line-height: 1.6; color: oklch(0.74 0.01 265); margin: 0 0 20px; text-wrap: pretty;">Reverse-engineered a closed-source UDP/ENet protocol with Ghidra &amp; Wireshark to extend a Java proxy — adding protocol-level features, packet blocking, and multi-layer DDoS mitigation. Architected a ~40k-line multi-service system over Unix Domain Sockets, and closed the loop directly with players over Discord.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Java</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">TypeScript</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Python</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">LMDB</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Ghidra</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Wireshark</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">iptables</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">UDS</span>
+            </div>
+            <a href="https://github.com/saadkhairullah/The-Blockheads-Server" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent, #aef23a); border-bottom: 1px solid oklch(0.4 0.08 128); padding-bottom: 2px;">github.com/saadkhairullah/The-Blockheads-Server ↗</a>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 18px; border-left: 1px solid oklch(0.28 0.01 265); padding-left: 30px;">
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">300+</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">registered players served</div></div>
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">20s → &lt;5ms</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">query latency after schema rework</div></div>
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">20+</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">real DDoS attacks blocked</div></div>
+          </div>
+        </article>
+
+        <!-- P2 -->
+        <article style="background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+            <span style="color: oklch(0.5 0.01 265);">02</span>
+            <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 3px 9px; border-radius: 20px;">Agentic AI</span>
+          </div>
+          <h3 style="font-size: 23px; letter-spacing: -0.015em; margin: 0 0 10px; font-weight: 700;">Healthcare Voice AI Agent</h3>
+          <p style="font-size: 15px; line-height: 1.6; color: oklch(0.74 0.01 265); margin: 0 0 20px; text-wrap: pretty;">An agentic system that autonomously places outbound calls to clinic agents, simulating a patient to probe service quality. Built solo in 31 hours to test a real business idea, with a real-time voice pipeline doing live turn-taking and agentic decisioning.</p>
+          <div style="display: flex; gap: 26px; margin-bottom: 22px;">
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">60+</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">production calls</div></div>
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">&lt;$2</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">total cost</div></div>
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">31 hrs</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">solo build</div></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">FastAPI</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Pipecat</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Telnyx</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Deepgram</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Silero VAD</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Llama 3.3 70B</span>
+          </div>
+          <a href="https://github.com/saadkhairullah/Telepohone-Voice-Assistant-Patient" target="_blank" rel="noopener" style="display: inline-block; margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--accent, #aef23a); border-bottom: 1px solid oklch(0.4 0.08 128); padding-bottom: 2px;">view repo ↗</a>
+        </article>
+
+        <!-- P3 -->
+        <article style="background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+            <span style="color: oklch(0.5 0.01 265);">03</span>
+            <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 3px 9px; border-radius: 20px;">AI Infra · LLM</span>
+          </div>
+          <h3 style="font-size: 23px; letter-spacing: -0.015em; margin: 0 0 10px; font-weight: 700;">AI Interviewer <span style="color: oklch(0.55 0.01 265); font-weight: 500; font-size: 16px;">/ Capstone</span></h3>
+          <p style="font-size: 15px; line-height: 1.6; color: oklch(0.74 0.01 265); margin: 0 0 20px; text-wrap: pretty;">Async FastAPI backend for concurrent, JWT-secured interview sessions. Built a Gemini data pipeline turning 47 YouTube transcripts into 300k+ structured dialogue tokens, then fine-tuned a 7B Qwen model (LoRA/PEFT) served on vLLM for real-time speech-to-speech.</p>
+          <div style="display: flex; gap: 24px; margin-bottom: 22px;">
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">300k+</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">dialogue tokens</div></div>
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">7B</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">Qwen, fine-tuned</div></div>
+            <div><div style="font-size: 27px; font-weight: 700; letter-spacing: -0.02em;">&lt;500ms</div><div style="font-size: 12px; color: oklch(0.6 0.01 265);">end-to-end</div></div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">PyTorch</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">HuggingFace</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">vLLM</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">LoRA/PEFT</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">WebSocket</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Gemini API</span>
+          </div>
+          <a href="https://github.com/vkr-vavilla/Senior_Design" target="_blank" rel="noopener" style="display: inline-block; margin-top: 18px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: var(--accent, #aef23a); border-bottom: 1px solid oklch(0.4 0.08 128); padding-bottom: 2px;">view repo ↗</a>
+        </article>
+
+        <!-- P4 -->
+        <article style="grid-column: span 2; display: grid; grid-template-columns: 1.35fr 1fr; gap: 34px; background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">
+              <span style="color: oklch(0.5 0.01 265);">04</span>
+              <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 3px 9px; border-radius: 20px;">Full-stack · Product</span>
+            </div>
+            <h3 style="font-size: 25px; letter-spacing: -0.015em; margin: 0 0 10px; font-weight: 700;">Texas Underground Coal Mine Locator</h3>
+            <p style="font-size: 15.5px; line-height: 1.6; color: oklch(0.74 0.01 265); margin: 0 0 20px; text-wrap: pretty;">Spotted a market gap and originated the concept: a tool for builders and home buyers to map undocumented underground coal mines before construction, cutting the risk of ground subsidence. Led a team of 5 in Agile — standups, sprints, architecture — and shipped a live, JWT-authenticated product.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 7px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">Next.js</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">TypeScript</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">React</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">MongoDB</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">MapboxGL</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.66 0.01 265); background: oklch(0.24 0.008 265); padding: 4px 9px; border-radius: 6px;">GeoJSON</span>
+            </div>
+            <a href="https://txuml.vercel.app" target="_blank" rel="noopener" style="display: inline-block; margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent, #aef23a); border-bottom: 1px solid oklch(0.4 0.08 128); padding-bottom: 2px;">txuml.vercel.app ↗</a>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 18px; border-left: 1px solid oklch(0.28 0.01 265); padding-left: 30px;">
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">350+</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">mines mapped, live</div></div>
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">Team of 5</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">led in Agile as originator</div></div>
+            <div><div style="font-size: 32px; font-weight: 700; letter-spacing: -0.02em;">Shipped</div><div style="font-size: 13px; color: oklch(0.6 0.01 265);">real users, in production</div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" style="padding: 56px 0 40px;">
+      <h2 style="font-size: clamp(28px, 4vw, 46px); letter-spacing: -0.02em; margin: 0 0 36px; font-weight: 700;">Toolbox</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: oklch(0.28 0.01 265); border: 1px solid oklch(0.28 0.01 265); border-radius: 14px; overflow: hidden;">
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">Languages</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">Python · TypeScript · JavaScript (ES6+) · Java · C</div>
+        </div>
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">Backend / APIs</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">FastAPI · Node.js · Express · Flask · Spring Boot · REST · WebSocket · async I/O · JWT · middleware · IPC</div>
+        </div>
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">AI / LLM</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">Agentic systems · fine-tuning · LoRA / PEFT / QLoRA · PyTorch · HuggingFace · vLLM · Pipecat</div>
+        </div>
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">Frontend</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">React · Next.js · React Context · MapboxGL · HTML / CSS</div>
+        </div>
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">Databases</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">MySQL · MongoDB · LMDB · SQL · relational schema design</div>
+        </div>
+        <div style="background: oklch(0.175 0.006 265); padding: 26px 28px;">
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 14px;">Systems / Tools</div>
+          <div style="font-size: 15px; line-height: 1.9; color: oklch(0.82 0.008 265);">Linux · Docker · Git · GitHub Actions · Ghidra · Wireshark · iptables · Unix Domain Sockets · Bash</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKGROUND -->
+    <section id="background" style="padding: 56px 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+      <div style="background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 18px;">Education</div>
+        <h3 style="font-size: 21px; letter-spacing: -0.01em; margin: 0 0 6px; font-weight: 700;">University of Texas at Arlington</h3>
+        <p style="font-size: 15px; color: oklch(0.78 0.008 265); margin: 0 0 4px;">B.S. Software Engineering</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.6 0.01 265); margin: 0;">Arlington, TX · Expected Aug 2026</p>
+      </div>
+      <div style="background: oklch(0.195 0.007 265); border: 1px solid oklch(0.3 0.01 265); border-radius: 16px; padding: 30px 32px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 18px;">Experience</div>
+        <h3 style="font-size: 21px; letter-spacing: -0.01em; margin: 0 0 6px; font-weight: 700;">AI Data Annotator <span style="color: oklch(0.55 0.01 265); font-weight: 500; font-size: 15px;">/ Freelance</span></h3>
+        <p style="font-size: 15px; color: oklch(0.78 0.008 265); margin: 0 0 4px;">Outlier.ai · Remote</p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.6 0.01 265); margin: 0 0 12px;">Apr 2024 – Jul 2024</p>
+        <p style="font-size: 14.5px; line-height: 1.55; color: oklch(0.72 0.01 265); margin: 0;">Evaluated and ranked AI-generated Python &amp; Java code for accuracy, feeding structured feedback into LLM RL pipelines.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section style="padding: 60px 0; text-align: center;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #aef23a); margin-bottom: 20px;">// let's build something</div>
+      <h2 style="font-size: clamp(30px, 5vw, 56px); letter-spacing: -0.025em; margin: 0 0 28px; font-weight: 700; line-height: 1.05;">Looking for a new grad who<br>already ships? That's me.</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+        <a href="mailto:Skhairullah10@hotmail.com" style="padding: 14px 24px; border-radius: 10px; background: var(--accent, #aef23a); color: oklch(0.165 0.006 265); font-weight: 700; font-size: 15px;">Skhairullah10@hotmail.com</a>
+        <a href="tel:6825837072" style="padding: 14px 22px; border-radius: 10px; border: 1px solid oklch(0.32 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px;">682·583·7072</a>
+        <a href="https://www.linkedin.com/in/saad-khairullah-bbba4718b/" target="_blank" rel="noopener" style="padding: 14px 22px; border-radius: 10px; border: 1px solid oklch(0.32 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px;">LinkedIn ↗</a>
+        <a href="https://github.com/saadkhairullah" target="_blank" rel="noopener" style="padding: 14px 22px; border-radius: 10px; border: 1px solid oklch(0.32 0.01 265); font-family: 'JetBrains Mono', monospace; font-size: 14px;">GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- FOOTER / SOURCES -->
+    <footer style="border-top: 1px solid oklch(0.26 0.01 265); padding: 30px 0 60px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: flex-start;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.5 0.01 265); line-height: 1.6;">© 2026 Saad Khairullah<br>Dallas, TX · open to relocation</div>
+      <div style="max-width: 560px;">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(0.5 0.01 265); margin-bottom: 10px;">Market data sources</div>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: oklch(0.55 0.01 265); line-height: 1.9;">
+          <a id="src-1" href="https://www.finalroundai.com/blog/software-engineering-job-market-2026" target="_blank" rel="noopener">[1] Final Round AI — SWE Job Market 2026 (LinkedIn / Dice / ManpowerGroup data)</a><br>
+          <a id="src-2" href="https://www.articuler.ai/resources/learn/software-engineer-job-market/" target="_blank" rel="noopener">[2] Articuler — SWE Job Market 2026 (BLS, new-grad hiring share)</a><br>
+          <a id="src-3" href="https://6figr.com/us/salary/new-grad-software-engineer--t" target="_blank" rel="noopener">[3] 6figr — New Grad SWE salary benchmarks, 2026</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#aef23a&quot;, &quot;options&quot;: [&quot;#aef23a&quot;, &quot;#3ad0f0&quot;, &quot;#ffb03a&quot;, &quot;#d9a6ff&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; },
+  &quot;showMarket&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Content&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? null,
+      showMarket: this.props.showMarket ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
