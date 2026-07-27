@@ -1,3 +1,0 @@
-{
-  "rewrites": [{ "source": "/", "destination": "/Portfolio.dc.html" }]
-}
