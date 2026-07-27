@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="__om-first-paint">html { background: #0e1116; } :root { color-scheme: dark; }</style>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Texas Underground Coal Mine Locator · Saad Khairullah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="./fx.js"></script>
+<link rel="prefetch" href="./Portfolio.dc.html">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: oklch(0.14 0.006 265); color: oklch(0.96 0.004 265); font-family: "Space Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent, #aef23a); }
+  ::selection { background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); }
+  @keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+  @keyframes floaty { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(30px, -40px); } }
+  @keyframes glitch { 0%, 100% { text-shadow: none; } 20% { text-shadow: 4px 0 oklch(0.7 0.19 350 / 0.7), -4px 0 oklch(0.8 0.15 230 / 0.7); } 60% { text-shadow: -4px 0 oklch(0.7 0.19 350 / 0.7), 4px 0 oklch(0.8 0.15 230 / 0.7); } }
+  @keyframes wipeOut { from { transform: translateY(0); } to { transform: translateY(-101%); } }
+  @keyframes textCycle { 0% { opacity: 0; } 18% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+</style>
+</helmet>
+<div style="--accent: {{ accent }}; min-height: 100vh;">
+  <div style="position: fixed; inset: 0; z-index: 120; background: oklch(0.13 0.006 265); pointer-events: none; animation: wipeOut 0.5s cubic-bezier(0.65, 0, 0.35, 1) 0.62s both; display: grid; place-items: center;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent, #aef23a); font-weight: 700; animation: textCycle 0.58s ease 0.04s both;">&gt; cat ./coal-mine-locator_</span></div>
+  <div id="page-wipe" style="position: fixed; inset: 0; z-index: 120; background: oklch(0.13 0.006 265); pointer-events: none; transform: translateY(101%); transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1); display: grid; place-items: center;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--accent, #aef23a); font-weight: 700; opacity: 0;">&gt; cd ../_</span></div>
+  <div style="position: fixed; inset: 0; z-index: 110; pointer-events: none; background: repeating-linear-gradient(0deg, transparent 0 2px, oklch(0 0 0 / 0.05) 2px 3px);"></div>
+  <div id="cursor-glow" style="position: fixed; left: 50%; top: 40%; width: 640px; height: 640px; margin: -320px 0 0 -320px; border-radius: 50%; background: radial-gradient(circle, oklch(0.75 0.19 128 / 0.08), transparent 62%); pointer-events: none; z-index: 60; mix-blend-mode: screen;"></div>
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 420px; background: url('./assets/plexus-bg.jpg') center / cover no-repeat; opacity: 0.5; pointer-events: none;"></div>
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 420px; background: linear-gradient(180deg, oklch(0.14 0.006 265 / 0.7), oklch(0.14 0.006 265)); pointer-events: none;"></div>
+  <canvas data-rain style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 420px; pointer-events: none;"></canvas>
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 80;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: 18px 36px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="Portfolio.dc.html" data-magnet style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 13px; backdrop-filter: blur(10px); background: oklch(0.14 0.006 265 / 0.5); padding: 9px 16px; border-radius: 30px; border: 1px solid oklch(0.32 0.01 265 / 0.5);">← saad_khairullah</a>
+      <a href="mailto:Skhairullah10@hotmail.com" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 30px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265);" style-hover="filter: brightness(1.15); color: oklch(0.14 0.006 265);">contact</a>
+    </div>
+  </header>
+  <main style="position: relative; max-width: 1040px; margin: 0 auto; padding: 130px 36px 80px; animation: rise 0.5s ease both;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px;">
+      <a href="Portfolio.dc.html#s4" style="color: oklch(0.55 0.01 265);">projects</a>
+      <span style="color: oklch(0.4 0.01 265);">/</span>
+      <span style="color: oklch(0.55 0.01 265);">04 of 04</span>
+      <span style="color: var(--accent, #aef23a); border: 1px solid oklch(0.4 0.08 128); padding: 4px 12px; border-radius: 20px; white-space: nowrap;">Full-stack · Product</span>
+    </div>
+    <h1 data-scramble style="font-size: clamp(36px, 5.4vw, 64px); letter-spacing: -0.03em; line-height: 1.02; margin: 0 0 20px; font-weight: 700; max-width: 18ch;" style-hover="animation: glitch 0.4s steps(2) infinite;">Texas Underground Coal Mine Locator</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: oklch(0.78 0.008 265); max-width: 60ch; margin: 0 0 28px; text-wrap: pretty;">A live map of 350+ abandoned underground coal mines in Texas and the boundaries they mined inside, so builders and buyers know what is under a plot before they build on it.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
+      <a href="https://txuml.vercel.app" target="_blank" rel="noopener" style="padding: 12px 20px; border-radius: 10px; background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); font-weight: 700; font-size: 14px;" style-hover="filter: brightness(1.15); color: oklch(0.14 0.006 265);">Open the live app ↗</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 44px;">
+      <div data-tilt style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: 22px 24px; transition: transform 0.18s ease-out;"><div style="font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">350+</div><div style="font-size: 13.5px; color: oklch(0.64 0.01 265);">mines mapped, live in production</div></div>
+      <div data-tilt style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: 22px 24px; transition: transform 0.18s ease-out;"><div style="font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">5</div><div style="font-size: 13.5px; color: oklch(0.64 0.01 265);">engineers led in Agile: standups, sprints, architecture</div></div>
+      <div data-tilt style="background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(16px); border: 1px solid oklch(1 0 0 / 0.12); box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08); border-radius: 14px; padding: 22px 24px; transition: transform 0.18s ease-out;"><div style="font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: var(--accent, #aef23a);">0 → 1</div><div style="font-size: 13.5px; color: oklch(0.64 0.01 265);">originated the concept from a market gap</div></div>
+    </div>
+    <div style="position: relative; margin-bottom: 44px;">
+      <div style="overflow: hidden; border-radius: 16px; border: 1px solid oklch(1 0 0 / 0.12); background: oklch(0.17 0.006 265);">
+        <div ref="{{ trackRef }}" data-gallery-track="" style="display: flex; width: 300%; will-change: transform; transform: {{ trackTransform }};">
+          <div style="flex: 0 0 33.3333%; min-width: 0;">
+            <div style="aspect-ratio: 16 / 9; background: oklch(0.13 0.006 265);"><img src="./assets/txuml-map-dark.png" alt="The logged-in map in dark mode, showing mine localities across Texas" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy" decoding="async"></div>
+            <div style="display: flex; align-items: baseline; gap: 12px; padding: 14px 20px; border-top: 1px solid oklch(1 0 0 / 0.08);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent, #aef23a); white-space: nowrap;">fig. 01</span><span style="font-size: 14.5px; color: oklch(0.78 0.008 265);">The map after logging in, in dark mode, with mine localities plotted across the state.</span></div>
+          </div>
+          <div style="flex: 0 0 33.3333%; min-width: 0;">
+            <div style="aspect-ratio: 16 / 9; background: oklch(0.13 0.006 265);"><img src="./assets/txuml-mine-detail.png" alt="A mine shaft record with its details and a density warning for the surrounding area" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy" decoding="async"></div>
+            <div style="display: flex; align-items: baseline; gap: 12px; padding: 14px 20px; border-top: 1px solid oklch(1 0 0 / 0.08);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent, #aef23a); white-space: nowrap;">fig. 02</span><span style="font-size: 14.5px; color: oklch(0.78 0.008 265);">Clicking a mine gives its name, site number, type, coal type and operating period, with sources cited. The panel warns when an area is extremely dense in underground mines.</span></div>
+          </div>
+          <div style="flex: 0 0 33.3333%; min-width: 0;">
+            <div style="aspect-ratio: 16 / 9; background: oklch(0.13 0.006 265);"><img src="./assets/txuml-landing.png" alt="The TXUML landing page for new users" style="width: 100%; height: 100%; object-fit: contain; display: block;" loading="lazy" decoding="async"></div>
+            <div style="display: flex; align-items: baseline; gap: 12px; padding: 14px 20px; border-top: 1px solid oklch(1 0 0 / 0.08);"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent, #aef23a); white-space: nowrap;">fig. 03</span><span style="font-size: 14.5px; color: oklch(0.78 0.008 265);">The landing page for new users.</span></div>
+          </div>
+        </div>
+      </div>
+      <button onClick="{{ prev }}" style="position: absolute; left: 14px; top: 40%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid oklch(1 0 0 / 0.18); background: oklch(0.16 0.006 265 / 0.55); backdrop-filter: blur(10px); color: oklch(0.96 0.004 265); font-size: 18px; cursor: pointer; transition: background 0.2s, transform 0.2s;" style-hover="background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); transform: translateY(-50%) scale(1.08);">←</button>
+      <button onClick="{{ next }}" style="position: absolute; right: 14px; top: 40%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; border: 1px solid oklch(1 0 0 / 0.18); background: oklch(0.16 0.006 265 / 0.55); backdrop-filter: blur(10px); color: oklch(0.96 0.004 265); font-size: 18px; cursor: pointer; transition: background 0.2s, transform 0.2s;" style-hover="background: var(--accent, #aef23a); color: oklch(0.14 0.006 265); transform: translateY(-50%) scale(1.08);">→</button>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px;">
+        <sc-for list="{{ dots }}" as="d" hint-placeholder-count="3">
+          <button onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+        </sc-for>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: oklch(0.55 0.01 265); margin-left: 6px;">{{ counter }}</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 48px; margin-bottom: 44px;">
+      <div>
+        <h2 style="font-size: 26px; letter-spacing: -0.015em; margin: 0 0 16px; font-weight: 700;">Overview</h2>
+        <p style="font-size: 17px; line-height: 1.65; color: oklch(0.82 0.008 265); margin: 0; text-wrap: pretty;">A live map of <strong style="color: oklch(0.94 0.004 265); font-weight: 600;">350+ abandoned underground coal mines</strong> in Texas, showing the boundaries they actually mined inside, so builders and buyers know what is under a plot before they build on it.</p>
+
+        <h2 style="font-size: 20px; letter-spacing: -0.01em; margin: 36px 0 14px; font-weight: 700;">Where the idea came from</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: oklch(0.76 0.01 265); margin: 0 0 14px; text-wrap: pretty;">I watched a Practical Engineering video about old underground coal mines, some of them 50 to 200 years old, causing the ground above them to sink. They were never maintained and mostly never documented properly, and water pressure builds up in the ground above them until it gives out.</p>
+        <p style="font-size: 16px; line-height: 1.7; color: oklch(0.76 0.01 265); margin: 0; text-wrap: pretty;">I wanted to know whether Texas had any. The Railroad Commission of Texas has records, but the only map they publish is <strong style="color: oklch(0.92 0.004 265); font-weight: 600;">a PDF</strong>, and it is hard to read and impossible to search. What they do publish is the underlying GeoJSON dataset. After digging into it I realized I could visualize that data far better than their own map did.</p>
+
+        <h2 style="font-size: 20px; letter-spacing: -0.01em; margin: 36px 0 14px; font-weight: 700;">What we built</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: oklch(0.76 0.01 265); margin: 0 0 14px; text-wrap: pretty;">I led a team of 5 to build it as a class project: assigning work, running standups and sprints, and making the architecture calls. Next.js and TypeScript on the front, MongoDB behind it, MapboxGL rendering the GeoJSON.</p>
+        <p style="font-size: 16px; line-height: 1.7; color: oklch(0.76 0.01 265); margin: 0; text-wrap: pretty;">The result clearly shows each mine and the boundary it operated within. It is meant for <strong style="color: oklch(0.92 0.004 265); font-weight: 600;">home builders and business owners</strong> who need to know whether the land they are about to build on sits over one of them.</p>
+      </div>
+      <div>
+        <h2 style="font-size: 15px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #aef23a); margin: 6px 0 16px; font-weight: 500;">Stack</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/nextdotjs/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">Next.js</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/typescript/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">TypeScript</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/react/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">React</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/mongodb/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">MongoDB</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/mapbox/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">MapboxGL</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;">GeoJSON</span>
+          <span style="display: inline-flex; align-items: center; gap: 7px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: oklch(0.75 0.01 265); background: oklch(0.28 0.01 265 / 0.35); backdrop-filter: blur(10px); border: 1px solid oklch(1 0 0 / 0.1); padding: 6px 12px; border-radius: 8px;"><img src="https://cdn.simpleicons.org/jsonwebtokens/b8c0cc" style="width: 15px; height: 15px;" alt="" loading="lazy" decoding="async">JWT</span>
+        </div>
+      </div>
+    </div>
+    <nav style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid oklch(0.28 0.01 265); padding-top: 26px;">
+      <a href="Project-AI-Interviewer.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: oklch(0.6 0.01 265);">← prev: AI Interviewer</a>
+      <a href="Project-VoiceAI.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent, #aef23a);">next: Healthcare Voice AI Agent →</a>
+    </nav>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{ &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#aef23a&quot;, &quot;options&quot;: [&quot;#aef23a&quot;, &quot;#3ad0f0&quot;, &quot;#ffb03a&quot;, &quot;#d9a6ff&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; } }">
+class Component extends DCLogic {
+  state = { idx: 0 };
+  trackRef = React.createRef();
+  _pos = 0;
+  componentDidMount() {
+    this._onKey = (e) => {
+      if (e.key === 'ArrowRight') this._go(1);
+      if (e.key === 'ArrowLeft') this._go(-1);
+    };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this._onKey); cancelAnimationFrame(this._tween); }
+  _go(d) { this._to((this.state.idx + d + 3) % 3); }
+  _to(i) {
+    const el = (this.trackRef && this.trackRef.current) || document.querySelector('[data-gallery-track]');
+    const to = -(i * 33.3333);
+    if (!el) { this.setState({ idx: i }); return; }
+    const from = this._pos == null ? -(this.state.idx * 33.3333) : this._pos;
+    cancelAnimationFrame(this._tween);
+    this._pos = to;
+    const still = document.hidden
+      || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if (still || from === to) { el.style.transform = 'translateX(' + to.toFixed(4) + '%)'; this.setState({ idx: i }); return; }
+    const t0 = performance.now(), dur = 480;
+    const ease = (p) => 1 - Math.pow(1 - p, 3);
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      const v = from + (to - from) * ease(p);
+      this._pos = p < 1 ? v : to;
+      el.style.transform = 'translateX(' + v.toFixed(4) + '%)';
+      if (p < 1) this._tween = requestAnimationFrame(step);
+    };
+    this._tween = requestAnimationFrame(step);
+    this.setState({ idx: i });
+  }
+  renderVals() {
+    const idx = this.state.idx;
+    const dots = [0, 1, 2].map((i) => ({
+      onClick: () => this._to(i),
+      style: {
+        width: i === idx ? '26px' : '10px', height: '10px', borderRadius: '10px', border: 'none',
+        cursor: 'pointer', padding: 0, transition: 'width 0.25s, background 0.25s',
+        background: i === idx ? 'var(--accent, #aef23a)' : 'oklch(0.38 0.01 265)',
+      },
+    }));
+    return {
+      accent: this.props.accent ?? null,
+      trackRef: this.trackRef,
+      trackTransform: 'translateX(-' + (idx * 33.3333).toFixed(4) + '%)',
+      counter: (idx + 1) + ' / 3',
+      prev: () => this._go(-1),
+      next: () => this._go(1),
+      dots,
+    };
+  }
+}
+</script>
+</body>
+</html>
