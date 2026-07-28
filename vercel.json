@@ -1,4 +1,26 @@
 {
   "cleanUrls": false,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Portfolio.dc.html"
+    },
+    {
+      "source": "/blockheads",
+      "destination": "/Project-Blockheads.dc.html"
+    },
+    {
+      "source": "/ai-interviewer",
+      "destination": "/Project-AI-Interviewer.dc.html"
+    },
+    {
+      "source": "/coal-mine-locator",
+      "destination": "/Project-CoalMineLocator.dc.html"
+    },
+    {
+      "source": "/voice-ai",
+      "destination": "/Project-VoiceAI.dc.html"
+    }
+  ]
 }

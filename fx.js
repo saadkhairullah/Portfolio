@@ -204,27 +204,35 @@
     }
   }, { passive: true });
 
-  // page-wipe transition for internal links — one "cd" line on the way out
-  const WIPE_NAMES = {
-    'Project-Blockheads.dc.html': 'blockheads-server',
-    'Project-VoiceAI.dc.html': 'voice-ai-agent',
-    'Project-AI-Interviewer.dc.html': 'ai-interviewer',
-    'Project-CoalMineLocator.dc.html': 'coal-mine-locator',
+  // Clean public routes. Vercel rewrites these to the real files, so visitors
+  // never see ".dc.html". Opened straight off disk there is no rewrite layer,
+  // so map back to the filename before navigating.
+  const ROUTES = {
+    '/': { file: 'Portfolio.dc.html', wipe: null },
+    '/blockheads': { file: 'Project-Blockheads.dc.html', wipe: 'blockheads-server' },
+    '/ai-interviewer': { file: 'Project-AI-Interviewer.dc.html', wipe: 'ai-interviewer' },
+    '/coal-mine-locator': { file: 'Project-CoalMineLocator.dc.html', wipe: 'coal-mine-locator' },
+    '/voice-ai': { file: 'Project-VoiceAI.dc.html', wipe: 'voice-ai-agent' },
   };
+  const FILE_MODE = location.protocol === 'file:' || location.pathname.indexOf('.dc.html') >= 0;
+
   document.addEventListener('click', (e) => {
-    const a = e.target.closest ? e.target.closest('a[href*=".dc.html"]') : null;
+    const a = e.target.closest ? e.target.closest('a[href]') : null;
     if (!a || a.target === '_blank') return;
+    const href = a.getAttribute('href') || '';
+    const [path, hash] = href.split('#');
+    const route = ROUTES[path];
+    if (!route) return;
     const w = document.getElementById('page-wipe');
     if (!w) return;
     e.preventDefault();
-    const href = a.getAttribute('href');
-    const base = href.split('/').pop();
     const s = w.querySelector('span');
     if (s) {
-      s.textContent = WIPE_NAMES[base] ? '> cd ./' + WIPE_NAMES[base] + '_' : '> cd ~/saad_';
+      s.textContent = route.wipe ? '> cd ./' + route.wipe + '_' : '> cd ~/saad_';
       s.style.animation = 'textCycle 0.5s ease 0.06s both';
     }
+    const dest = (FILE_MODE ? route.file : path) + (hash ? '#' + hash : '');
     w.style.transform = 'translateY(0)';
-    setTimeout(() => { location.href = href; }, 580);
+    setTimeout(() => { location.href = dest; }, 580);
   });
 })();
